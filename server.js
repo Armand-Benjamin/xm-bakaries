@@ -25,6 +25,10 @@ app.use("/api/products", productRoutes)
 app.use("/api/orders", orderRoutes)
 app.use("/api/reports", reportRoutes)
 
+app.get('/', (req, res) => {
+  res.send("Welcome to XM Bakery");
+});
+
 // Health check route
 app.get("/api/health", (req, res) => {
   res.send("XM Bakery API is running");
